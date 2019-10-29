@@ -3,8 +3,6 @@ var BlinkyDancer = function(top, left, timeBetweenSteps) {
   // so we must keep a copy of the old version of this function
   Dancer.call(this, top, left, timeBetweenSteps);
 
-  this.oldStep = this.step;
-
 };
 
 BlinkyDancer.prototype = Object.create(Dancer.prototype);
@@ -19,6 +17,8 @@ BlinkyDancer.prototype.step = function() {
   // other effects you can use on a jQuery-wrapped html tag.
   this.$node.toggle();
 };
+
+BlinkyDancer.prototype.oldStep = Dancer.prototype.step;
 
 // var kevin = new BlinkDancer(10,20,100);
 // this = Object.create(BlinkyDancer.prototype);
