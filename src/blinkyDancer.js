@@ -10,14 +10,15 @@ BlinkyDancer.prototype.constructor = BlinkyDancer;
 
 BlinkyDancer.prototype.step = function() {
   // call the old version of step at the beginning of any call to this new version of step
-  this.oldStep();
+  Dancer.prototype.step.call(this); // `this` is bound to blinkyDancer, whereas without call(), `step()` would be bound to `Dancer.prototype`. We want to bind to `blinkyDancer`
+
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
   this.$node.toggle();
 };
 
-BlinkyDancer.prototype.oldStep = Dancer.prototype.step;
+// BlinkyDancer.prototype.oldStep = Dancer.prototype.step;
 
 // var kevin = new BlinkDancer(10,20,100);
 // this = Object.create(BlinkyDancer.prototype);
