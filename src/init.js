@@ -23,11 +23,31 @@ $(document).ready(function() {
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction( // keyword `new` follows pseudoclassical pattern
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
   });
+
+  $('.addAPunch').on('click', function(e) {
+    var startPunching = $(this).data('punch-faces');
+
+    var startPunching = window[startPunching];
+
+    var puncher = new startPunching(
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
+      Math.random() * 1000
+    );
+    $('body').append(puncher.$node);
+
+    // an array of frame
+    // loop through frames
+    //  changing the src to current frame at each iteration
+  });
+  // $('.puncher').hover(function() {
+  //   $('.puncher').attr('src',left)
+  // });
 });
 
