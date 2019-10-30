@@ -2,6 +2,9 @@ body, html{
   height:100%;
 }
 body{
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6abd54d1-7f55-4af0-abe9-30d90b83663f/d9h4lzl-2fc8a294-1d19-46ba-9974-63c3c1bb2d2b.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzZhYmQ1NGQxLTdmNTUtNGFmMC1hYmU5LTMwZDkwYjgzNjYzZlwvZDloNGx6bC0yZmM4YTI5NC0xZDE5LTQ2YmEtOTk3NC02M2MzYzFiYjJkMmIuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ZqB8ArPLA1muhxRBhyFQRNGn_0nJ4rglink0HzoY3mM');
+  background-size: 100%;
+  background-repeat: no-repeat;
   margin: 0px;
   background-color:#444;
   font-size: 18px;
@@ -9,7 +12,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .addDancerButton, .addAPunch{
   padding:5px 12px;
   float:right;
 }
@@ -25,3 +28,6 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+/* .puncher{
+  position: absolute;
+} */
